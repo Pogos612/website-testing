@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frog Frog to-do list</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="icon" href="images/frog frog to-do list icon.png">
+    <script src="https://kit.fontawesome.com/fd685bdd1f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header style="grid-area: header-box;">
+        <div id="tutorialnBar">
+            <div class="tutorialDiv">
+                <h3>Add / delete a task</h3>
+                <span class="tutorialComment">Click the "Add a new task" button in task managment, or click the "+" icon
+                    when you hover a task
+                    to add a new task, click "-" to delete a task.</span>
+            </div>
+            <div class="tutorialDiv">
+                <h3>Move up / down a task</h3>
+                <span class="tutorialComment"> Click the <i class="fa-solid fa-chevron-up"></i> or <i
+                        class="fa-solid fa-chevron-down"></i> to move the task up or down.</span>
+            </div>
+            <div class="tutorialDiv">
+                <h3>Add a checkbox</h3>
+                <span class="tutorialComment">Use the "Tab" button to create a new check box.</span>
+            </div>
+            <div class="tutorialDiv">
+                <h3>Assess priority levels</h3>
+                <span class="tutorialComment">When creating a new task, you can choose three types of priority levels to
+                    show how the importance of this task to you.</span>
+            </div>
+            <div class="tutorialDiv">
+                <h3>Contact</h3>
+                <span class="tutorialComment">If you have any problem, contact me: 0123 456 789.</span>
+            </div>
+        </div>
+    </header>
+
+    <aside style="grid-area: aside-box;">
+        <div id="taskContainer">
+            <div id="buttonTaskContainer">
+                <button id="buttonAdd" onclick="addTask()">Add a new task</button>
+            </div>
+            <div id="taskBar">
+            </div>
+        </div>
+
+
+    </aside>
+
+    <section style="grid-area: section-box;">
+        <div class="taskSheetContainer" contenteditable="true" placeholder="Type your text">
+        </div>
+    </section>
+
+    <div id="inputNewTask">
+        <button onclick="hiddenTask()" id="inputNewTaskX">X</button>
+        <form id="inputNewTaskForm">
+            <div id="inputNewTaskNameContainer">
+                <label for="inputNewTaskName">Name of the task: </label><br>
+                <input type="text" id="inputNewTaskName">
+            </div>
+
+            <div id="inputNewTaskPriorityContainer">
+                <label id="inputNewTaskPriorityLabel" for="inputNewTaskPriority">Priority: </label><br>
+
+                <div id="inputNewTaskPriorityContainerOptions">
+                    <input type="radio" id="common" value="common" name="inputNewTaskPriority">
+                    <label id="common" for="common">Common</label>
+
+                    <input type="radio" id="needToDo" value="needToDo" name="inputNewTaskPriority">
+                    <label id="needToDo" for="needToDo">Need to do</label>
+
+                    <input type="radio" id="urgent" value="urgent" name="inputNewTaskPriority">
+                    <label id="urgent" for="urgent">Urgent</label><br>
+                </div>
+            </div>
+
+            <div id="inputNewTaskButtonContainer">
+                <button id="inputNewTaskButton" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="functionButton.js"></script>
+</body>
+
+</html>
